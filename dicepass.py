@@ -15,8 +15,10 @@ import secrets
 import warnings
 import string
 
+import pyperclip
+
 #Change this to work on your system
-working_directory_target = ''
+working_directory_target = '/Users/mattc/Documents/GitHub/dicepass/'
 
 def wordlist_to_json(in_file, out_file):
     """Import a given word list and output a JSON dictionary for use in the
@@ -140,4 +142,5 @@ def generate_passphrase_3scheme(word_count=5,numeric_count=5, word_list_file="ef
 if __name__ == '__main__':
     #wordlist_to_json("eff_large_wordlist_tall_long.txt", "eff_large_wordlist.json")
     x = generate_passphrase_3scheme()
+    pyperclip.copy(x)
     print(x)
