@@ -131,7 +131,7 @@ def generate_passphrase_3scheme(word_count=5,numeric_count=5, word_list_file="ef
 
     #Shuffle it up, do the capitalization
     pass_string = ''
-    while len(pass_elements) is not 0:
+    while len(pass_elements)!=0:
         elem = secrets.choice(pass_elements)
         pass_elements.remove(elem)
         pass_string = pass_string + elem + ' '
